@@ -152,9 +152,9 @@ int main(int argc, char **argv)
 {
   setSignalHandler(quit_signal_handle);
 
-  parse_parameter(argc, argv);
+  parse_parameter(argc, argv);    // 解析命令行参数
 
-  int rc = STATUS_SUCCESS;
+  int rc = STATUS_SUCCESS;     // 0
   rc = init(the_process_param());
   if (rc) {
     std::cerr << "Shutdown due to failed to init!" << std::endl;
