@@ -167,7 +167,7 @@ void Stage::add_event(StageEvent *event)
 
     event_ref_++;
     MUTEX_UNLOCK(&list_mutex_);
-    th_pool_->schedule(this);
+    th_pool_->schedule(this);    // 每个Stage都有自己的线程池，th_pool_就是这个Stage的线程池
   } else {
     MUTEX_UNLOCK(&list_mutex_);
   }

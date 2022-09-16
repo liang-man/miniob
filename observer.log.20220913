@@ -1,0 +1,614 @@
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+Finish dump configuration 
+
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 10862 Time: Tue Sep 13 08:47:17 2022
+
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  ERROR: seda_config.cpp init_thread_pool 225]>>Configuration hasn't set ThreadPools
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  ERROR: seda_config.cpp instantiate 420]>>Failed to init thread pool
+
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  ERROR: init.cpp init_seda 69]>>SedaConfig: unable to initialize seda stages
+[2022-9-13 8:47:17 pid:10862 tid:7ffff78a1740  ERROR: init.cpp init 244]>>Failed to init seda configuration!
+[2022-9-13 8:58:59 pid:11396 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+Finish dump configuration 
+
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 8:59:8 pid:11396 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=SQLThreads,IOThreads,D
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 17926 Time: Tue Sep 13 10:54:53 2022
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-13 10:54:53 pid:17926 tid:7ffff466e700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466e700, threadname = SQLThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff3e6d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6d700, threadname = SQLThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff366c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366c700, threadname = SQLThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff2e6b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6b700, threadname = IOThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff266a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff266a700, threadname = IOThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff1e69700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e69700, threadname = IOThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff1668700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1668700, threadname = DefaultThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=0
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-13 10:54:53 pid:17926 tid:7ffff0e67700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e67700, threadname = DefaultThreads
+
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 392]>>Listen on unix socket: miniob.sock
+[2022-9-13 10:54:53 pid:17926 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 409]>>Observer start success
+[2022-9-13 10:55:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 10:55:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 10:55:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 10:55:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 10:56:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 10:56:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 10:56:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 10:56:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 10:57:16 pid:17926 tid:7ffff78a1740  INFO: server.cpp accept 279]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-13 10:57:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 10:57:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 10:57:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 10:57:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 10:58:10 pid:17926 tid:7ffff78a1740  INFO: server.cpp recv 176]>>receive command(size=64): create table t_basic(id int, age int, name char, score float);
+
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  WARNNING: stmt.cpp create_stmt 37]>>unknown query command
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: table.cpp create 61]>>Begin to create table ./miniob/db/sys:t_basic
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: table_meta.cpp init 97]>>Sussessfully initialized table meta. table name=t_basic
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: disk_buffer_pool.cpp create_file 569]>>Successfully create ./miniob/db/sys/t_basic.data.
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=10, hdr_frame=0x7ffff77a0010
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: table.cpp create 117]>>Successfully create table ./miniob/db/sys:t_basic
+[2022-9-13 10:58:10 pid:17926 tid:7ffff1668700  INFO: db.cpp create_table 75]>>Create table success. table name=t_basic
+[2022-9-13 10:58:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 10:58:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0.0166667
+[2022-9-13 10:58:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0.0166667
+[2022-9-13 10:58:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0.0333333
+[2022-9-13 10:59:31 pid:17926 tid:7ffff78a1740  INFO: server.cpp recv 167]>>The peer has been closed 0.0.0.0:0
+
+[2022-9-13 10:59:31 pid:17926 tid:7ffff78a1740  INFO: server.cpp close_connection 104]>>Close connection of 0.0.0.0:0.
+[2022-9-13 10:59:32 pid:17926 tid:7ffff78a1740  INFO: server.cpp accept 279]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-13 10:59:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 10:59:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0.0166667
+[2022-9-13 10:59:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 10:59:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:0:9 pid:17926 tid:7ffff78a1740  INFO: server.cpp recv 176]>>receive command(size=64): create table t_basic(id int, age int, name char, score float);
+
+[2022-9-13 11:0:9 pid:17926 tid:7ffff1668700  WARNNING: stmt.cpp create_stmt 37]>>unknown query command
+[2022-9-13 11:0:9 pid:17926 tid:7ffff1668700  WARNNING: db.cpp create_table 60]>>t_basic has been opened before.
+[2022-9-13 11:0:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:0:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0.0166667
+[2022-9-13 11:0:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0.0166667
+[2022-9-13 11:0:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0.0333333
+[2022-9-13 11:1:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:1:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:1:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:1:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:2:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:2:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:2:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:2:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:3:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:3:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:3:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:3:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:3:58 pid:17926 tid:7ffff78a1740  INFO: server.cpp recv 176]>>receive command(size=14): show tables;
+
+[2022-9-13 11:3:58 pid:17926 tid:7fffd3fff700  WARNNING: stmt.cpp create_stmt 37]>>unknown query command
+[2022-9-13 11:4:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:4:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0.0166667
+[2022-9-13 11:4:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0.0166667
+[2022-9-13 11:4:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0.0333333
+[2022-9-13 11:5:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:5:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:5:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:5:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:6:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:6:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:6:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:6:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:7:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:7:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:7:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:7:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:8:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:8:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:8:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:8:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:9:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:9:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:9:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:9:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:10:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:10:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:10:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:10:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:11:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:11:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:11:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:11:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:12:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:12:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:12:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:12:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:13:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:13:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:13:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:13:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:14:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:14:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:14:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:14:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:15:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:15:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:15:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:15:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:16:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:16:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:16:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:16:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:17:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:17:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:17:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:17:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:18:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:18:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:18:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:18:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:19:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:19:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:19:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:19:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:20:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:20:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:20:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:20:53 pid:17926 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:21:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:21:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:21:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:21:53 pid:17926 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:22:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:22:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:22:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:22:53 pid:17926 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=SQLThreads,IOThreads,D
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 22283 Time: Tue Sep 13 11:54:53 2022
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-13 11:54:53 pid:22283 tid:7ffff466e700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466e700, threadname = SQLThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff3e6d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6d700, threadname = SQLThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff366c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366c700, threadname = SQLThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff2e6b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6b700, threadname = IOThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff266a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff266a700, threadname = IOThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff1e69700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e69700, threadname = IOThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff1668700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1668700, threadname = DefaultThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff0e67700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e67700, threadname = DefaultThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=4, hdr_frame=0x7ffff77a0010
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=1
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-13 11:54:53 pid:22283 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 392]>>Listen on unix socket: miniob.sock
+[2022-9-13 11:54:53 pid:22283 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 409]>>Observer start success
+[2022-9-13 11:56:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:56:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:56:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:56:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:57:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:57:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:57:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:57:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:58:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:58:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:58:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:58:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 11:59:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 11:59:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 11:59:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 11:59:14 pid:22283 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 12:0:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 12:0:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 12:0:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 12:0:14 pid:22283 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-13 12:1:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-13 12:1:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-13 12:1:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-13 12:1:14 pid:22283 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0

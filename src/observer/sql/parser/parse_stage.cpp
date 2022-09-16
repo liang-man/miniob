@@ -121,7 +121,7 @@ void ParseStage::callback_event(StageEvent *event, CallbackContext *context)
 RC ParseStage::handle_request(StageEvent *event)
 {
   SQLStageEvent *sql_event = static_cast<SQLStageEvent *>(event);
-  const std::string &sql = sql_event->sql();
+  const std::string &sql = sql_event->sql();    // sql变量的值就是客户端上输入的sql命令
 
   Query *query_result = query_create();
   if (nullptr == query_result) {
@@ -129,7 +129,7 @@ RC ParseStage::handle_request(StageEvent *event)
     return RC::INTERNAL;
   }
 
-  RC ret = parse(sql.c_str(), query_result);
+  RC ret = parse(sql.c_str(), query_result);   // 在parse.cpp中进行此法分析，并返回分析结果
   if (ret != RC::SUCCESS) {
     // set error information to event
     sql_event->session_event()->set_response("Failed to parse sql\n");

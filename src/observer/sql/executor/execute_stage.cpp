@@ -153,6 +153,9 @@ void ExecuteStage::handle_request(common::StageEvent *event)
     case SCF_HELP: {
       do_help(sql_event);
     } break;
+    case SCF_DROP_TABLE: {             //author: liangman
+      do_drop_table(sql_event);
+    } break;
     case SCF_CREATE_TABLE: {
       do_create_table(sql_event);
     } break;
@@ -166,7 +169,6 @@ void ExecuteStage::handle_request(common::StageEvent *event)
       do_desc_table(sql_event);
     } break;
 
-    case SCF_DROP_TABLE:
     case SCF_DROP_INDEX:
     case SCF_LOAD_DATA: {
       default_storage_stage_->handle_event(event);
@@ -448,6 +450,21 @@ RC ExecuteStage::do_help(SQLStageEvent *sql_event)
   return RC::SUCCESS;
 }
 
+//author: liangman
+RC ExecuteStage::do_drop_table(SQLStageEvent *sql_event)
+{
+  const DropTable &drop_table = sql_event->query()->sstr.drop_table;   // 获取drop_table结构体
+  SessionEvent *session_event = sql_event->session_event();
+  Db *db = session_event->session()->get_current_db();    // 获取当前数据库(数据库以文件形式存在) 类调用：SessionEvent->Session->Db
+  RC rc = db->drop_table(drop_table.relation_name);       // 删除表
+  if (rc == RC::SUCCESS) {
+    session_event->set_response("SUCCESS\n");
+  } else {
+    session_event->set_response("FAILURE\n");
+  }
+  return rc;
+}
+
 RC ExecuteStage::do_create_table(SQLStageEvent *sql_event)
 {
   const CreateTable &create_table = sql_event->query()->sstr.create_table;
@@ -462,6 +479,7 @@ RC ExecuteStage::do_create_table(SQLStageEvent *sql_event)
   }
   return rc;
 }
+
 RC ExecuteStage::do_create_index(SQLStageEvent *sql_event)
 {
   SessionEvent *session_event = sql_event->session_event();

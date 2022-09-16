@@ -109,13 +109,14 @@ public:
 private:
   friend class DiskBufferPool;
 
-  bool          dirty_     = false;
-  unsigned int  pin_count_ = 0;
+  bool          dirty_     = false;    // 是否修改过这个page
+  unsigned int  pin_count_ = 0;   // 引用计数
   unsigned long acc_time_  = 0;
-  int           file_desc_ = -1;
-  Page          page_;
+  int           file_desc_ = -1;  // 对应文件
+  Page          page_;            // 对应哪一页
 };
 
+// 管理所有内存里的frame(如：寻找空闲的frame；将frame与page关联起来)
 class BPFrameManager : public common::MemPoolSimple<Frame>
 {
 public:
@@ -147,7 +148,8 @@ private:
   PageNum  current_page_num_ = -1;
 };
 
-class DiskBufferPool
+// file(一个file包含很多个page，且每个page的大小是固定的)
+class DiskBufferPool   
 {
 public:
   DiskBufferPool(BufferPoolManager &bp_manager, BPFrameManager &frame_manager);
@@ -167,6 +169,8 @@ public:
    * 关闭分页文件
    */
   RC close_file();
+
+  RC drop_file(const char *path, const char *name, const char *index_name);    // liangman
 
   /**
    * 根据文件ID和页号获取指定页面到缓冲区，返回页面句柄指针。
@@ -236,7 +240,7 @@ protected:
    */
   RC load_page(PageNum page_num, Frame *frame);
 
-private:
+private:   // 一个file拥有的属性
   BufferPoolManager &bp_manager_;
   BPFrameManager &   frame_manager_;
   std::string        file_name_;
@@ -254,6 +258,8 @@ class BufferPoolManager
 public:
   BufferPoolManager();
   ~BufferPoolManager();
+
+  RC drop_file(const char *file_name);   // author：liangman
 
   RC create_file(const char *file_name);
   RC open_file(const char *file_name, DiskBufferPool *&bp);

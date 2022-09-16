@@ -162,7 +162,7 @@ int main(int argc, char **argv)
 
   g_server = init_server();
   Server::init();
-  g_server->serve();
+  g_server->serve();    // 一直等待监听客户端消息
 
   LOG_INFO("Server stopped");
 

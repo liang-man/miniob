@@ -41,7 +41,7 @@ Threadpool::Threadpool(unsigned int threads, const std::string &name)
 {
   LOG_TRACE("Enter, thread number:%d", threads);
   MUTEX_INIT(&run_mutex_, NULL);
-  COND_INIT(&run_cond_, NULL);
+  COND_INIT(&run_cond_, NULL);     // 使用第二个参数来初始化条件变量，当为NULL时，使用缺省的属性
   MUTEX_INIT(&thread_mutex_, NULL);
   COND_INIT(&thread_cond_, NULL);
   add_threads(threads);
@@ -221,7 +221,7 @@ void Threadpool::schedule(Stage *stage)
 {
   assert(!stage->qempty());
 
-  MUTEX_LOCK(&run_mutex_);
+  MUTEX_LOCK(&run_mutex_);      // 加互斥锁
   bool was_empty = run_queue_.empty();
   run_queue_.push_back(stage);
   // let current thread continue to run the target stage if there is
@@ -232,7 +232,7 @@ void Threadpool::schedule(Stage *stage)
       COND_SIGNAL(&run_cond_);
     }
   }
-  MUTEX_UNLOCK(&run_mutex_);
+  MUTEX_UNLOCK(&run_mutex_);    // 释放互斥锁
 }
 
 // Get name of thread pool
@@ -253,9 +253,12 @@ void *Threadpool::run_thread(void *pool_ptr)
   // save thread pool pointer
   set_thread_pool_ptr(pool);
 
-  // this is not portable, but is easier to map to LWP
+  // this is not portable, but is easier to map to LWP(轻量级进程)
   s64_t threadid = gettid();
   LOG_INFO("threadid = %llx, threadname = %s\n", threadid, pool->get_name().c_str());
+
+  // liangman
+  std::cout << "threadid = " << threadid << ", threadname = " << pool->get_name().c_str() << std::endl; 
 
   // enter a loop where we continuously look for events from Stages on
   // the run_queue_ and handle the event.

@@ -93,18 +93,18 @@ protected:
 #ifndef DEBUG_LOCK
 
 #define MUTEXT_STATIC_INIT() PTHREAD_MUTEX_INITIALIZER
-#define MUTEX_INIT(lock, attr) pthread_mutex_init(lock, attr)
-#define MUTEX_DESTROY(lock) pthread_mutex_destroy(lock)
-#define MUTEX_LOCK(lock) pthread_mutex_lock(lock)
-#define MUTEX_UNLOCK(lock) pthread_mutex_unlock(lock)
-#define MUTEX_TRYLOCK(lock) pthread_mutex_trylock(lock)
+#define MUTEX_INIT(lock, attr) pthread_mutex_init(lock, attr)  // 互斥锁的初始化
+#define MUTEX_DESTROY(lock) pthread_mutex_destroy(lock)   // 互斥锁销毁函数
+#define MUTEX_LOCK(lock) pthread_mutex_lock(lock)         // 锁定互斥锁
+#define MUTEX_UNLOCK(lock) pthread_mutex_unlock(lock)     // 释放互斥锁
+#define MUTEX_TRYLOCK(lock) pthread_mutex_trylock(lock)   // 非阻塞的锁定互斥锁
 
-#define COND_INIT(cond, attr) pthread_cond_init(cond, attr)
-#define COND_DESTROY(cond) pthread_cond_destroy(cond)
-#define COND_WAIT(cond, mutex) pthread_cond_wait(cond, mutex)
-#define COND_WAIT_TIMEOUT(cond, mutex, time, ret) ret = pthread_cond_timedwait(cond, mutex, time)
-#define COND_SIGNAL(cond) pthread_cond_signal(cond)
-#define COND_BRAODCAST(cond) pthread_cond_broadcast(cond)
+#define COND_INIT(cond, attr) pthread_cond_init(cond, attr)   // 初始化条件变量
+#define COND_DESTROY(cond) pthread_cond_destroy(cond)         // 销毁cond指向的条件变量
+#define COND_WAIT(cond, mutex) pthread_cond_wait(cond, mutex) // 条件等待
+#define COND_WAIT_TIMEOUT(cond, mutex, time, ret) ret = pthread_cond_timedwait(cond, mutex, time)  // 计时等待
+#define COND_SIGNAL(cond) pthread_cond_signal(cond)           // 激活一个等待该条件的线程，存在多个等待线程时，按入队顺序激活其中一个
+#define COND_BRAODCAST(cond) pthread_cond_broadcast(cond)     // 激活所有等待该条件的线程
 
 #else  // DEBUG_LOCK
 

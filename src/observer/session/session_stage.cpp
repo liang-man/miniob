@@ -97,6 +97,8 @@ void SessionStage::cleanup()
   LOG_TRACE("Exit");
 }
 
+// 每个Stage用handle_event处理任务，但每个Stage都有自己的handle_event
+// 但是SessionStage的handle_event是门户，是所有handle_event中第一个执行的
 void SessionStage::handle_event(StageEvent *event)
 {
   LOG_TRACE("Enter\n");
@@ -167,6 +169,7 @@ void SessionStage::handle_request(StageEvent *event)
 
   sev->push_callback(cb);
 
-  SQLStageEvent *sql_event = new SQLStageEvent(sev, sql);
+  // 因为下一个Stage(PlanCache)未做处理，其直接把event传递给了ParseStage，所以这里创建的event是SQLEvent，而不是PlanCacheEvent
+  SQLStageEvent *sql_event = new SQLStageEvent(sev, sql);  
   plan_cache_stage_->handle_event(sql_event);
 }

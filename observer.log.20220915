@@ -1,0 +1,1961 @@
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=SQLThreads,IOThreads,D
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 5153 Time: Thu Sep 15 08:26:12 2022
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 8:26:12 pid:5153 tid:7ffff466e700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466e700, threadname = SQLThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff3e6d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6d700, threadname = SQLThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff366c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366c700, threadname = SQLThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff2e6b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6b700, threadname = IOThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff266a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff266a700, threadname = IOThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff1e69700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e69700, threadname = IOThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff1668700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1668700, threadname = DefaultThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff0e67700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e67700, threadname = DefaultThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff77a0010
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=5, hdr_frame=0x7ffff77a2028
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=6, hdr_frame=0x7ffff77a4040
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=7, hdr_frame=0x7ffff77a6058
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=8, hdr_frame=0x7ffff77a8070
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=5
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 8:26:12 pid:5153 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 8:26:23 pid:5153 tid:7ffff78a1740  INFO: server.cpp accept 291]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-15 8:27:12 pid:5153 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 8:27:12 pid:5153 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 8:27:12 pid:5153 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 8:27:12 pid:5153 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 8:27:58 pid:5153 tid:7ffff78a1740  INFO: server.cpp recv 180]>>receive command(size=65): create table t_basic6(id int, age int, name char, score float);
+
+[2022-9-15 8:28:15 pid:5153 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 8:28:15 pid:5153 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 8:28:15 pid:5153 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 8:28:15 pid:5153 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=SQLThreads,IOThreads,D
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 8193 Time: Thu Sep 15 08:44:39 2022
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 8:44:39 pid:8193 tid:7ffff466e700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466e700, threadname = SQLThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff3e6d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6d700, threadname = SQLThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff366c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366c700, threadname = SQLThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff2e6b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6b700, threadname = IOThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff266a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff266a700, threadname = IOThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff1668700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1668700, threadname = DefaultThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff0e67700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e67700, threadname = DefaultThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:44:39 pid:8193 tid:7ffff1e69700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e69700, threadname = IOThreads
+
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff77a0010
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=5, hdr_frame=0x7ffff77a2028
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=6, hdr_frame=0x7ffff77a4040
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=7, hdr_frame=0x7ffff77a6058
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=8, hdr_frame=0x7ffff77a8070
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=5
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 8:44:39 pid:8193 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 8:44:52 pid:8193 tid:7ffff78a1740  INFO: server.cpp accept 291]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-15 8:46:12 pid:8193 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 8:46:12 pid:8193 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 8:46:12 pid:8193 tid:7ffff78a1740  INFO: server.cpp recv 180]>>receive command(size=65): create table t_basic6(id int, age int, name char, score float);
+
+[2022-9-15 8:46:12 pid:8193 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 8:46:12 pid:8193 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=SQLThreads,IOThreads,D
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 8693 Time: Thu Sep 15 08:47:28 2022
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 8:47:28 pid:8693 tid:7ffff466e700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466e700, threadname = SQLThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff3e6d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6d700, threadname = SQLThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff366c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366c700, threadname = SQLThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff2e6b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6b700, threadname = IOThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff266a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff266a700, threadname = IOThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff1e69700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e69700, threadname = IOThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7fffdbfff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffdbfff700, threadname = DefaultThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff0e67700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e67700, threadname = DefaultThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff77a0010
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=5, hdr_frame=0x7ffff77a2028
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=6, hdr_frame=0x7ffff77a4040
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 8:47:28 pid:8693 tid:7ffff1668700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1668700, threadname = DefaultThreads
+
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=7, hdr_frame=0x7ffff77a6058
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=8, hdr_frame=0x7ffff77a8070
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=5
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 8:47:28 pid:8693 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 8:47:32 pid:8693 tid:7ffff78a1740  INFO: server.cpp accept 291]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-15 8:48:38 pid:8693 tid:7ffff78a1740  INFO: server.cpp recv 180]>>receive command(size=65): create table t_basic6(id int, age int, name char, score float);
+
+[2022-9-15 8:48:38 pid:8693 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 8:48:38 pid:8693 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 8:48:38 pid:8693 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 8:48:38 pid:8693 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  WARNNING: stmt.cpp create_stmt 37]>>unknown query command
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: table.cpp create 61]>>Begin to create table ./miniob/db/sys:t_basic6
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: table_meta.cpp init 97]>>Sussessfully initialized table meta. table name=t_basic6
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: disk_buffer_pool.cpp create_file 569]>>Successfully create ./miniob/db/sys/t_basic6.data.
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic6.data.
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic6.data. file_desc=15, hdr_frame=0x7ffff77aa088
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: table.cpp create 117]>>Successfully create table ./miniob/db/sys:t_basic6
+[2022-9-15 8:51:0 pid:8693 tid:7ffff1668700  INFO: db.cpp create_table 75]>>Create table success. table name=t_basic6
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=SQLThreads,IOThreads,D
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 9893 Time: Thu Sep 15 09:18:57 2022
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 9:18:57 pid:9893 tid:7ffff466d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466d700, threadname = SQLThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7fffebfff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffebfff700, threadname = SQLThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff3e6c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6c700, threadname = SQLThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff366b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366b700, threadname = IOThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff2e6a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6a700, threadname = IOThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff2669700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2669700, threadname = IOThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff1e68700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e68700, threadname = DefaultThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff1667700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1667700, threadname = DefaultThreads
+
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff779f010
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=5, hdr_frame=0x7ffff77a1028
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=6, hdr_frame=0x7ffff77a3040
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic6.data.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic6.data. file_desc=7, hdr_frame=0x7ffff77a5058
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic6, file: t_basic6.table
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=8, hdr_frame=0x7ffff77a7070
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=9, hdr_frame=0x7ffff77a9088
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=6
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 9:18:57 pid:9893 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 9:18:57 pid:9893 tid:7ffff0e66700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e66700, threadname = DefaultThreads
+
+[2022-9-15 9:19:57 pid:9893 tid:7ffff1e68700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:19:57 pid:9893 tid:7ffff1e68700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:19:57 pid:9893 tid:7ffff1e68700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:19:57 pid:9893 tid:7ffff1e68700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:20:50 pid:10402 tid:7ffff78a1740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=3         # 默认为1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=S
+[2022-9-15 9:20:50 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 10402 Time: Thu Sep 15 09:20:51 2022
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 9:20:51 pid:10402 tid:7ffff466e700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466e700, threadname = SQLThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff3e6d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6d700, threadname = SQLThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff366c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366c700, threadname = SQLThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff2e6b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6b700, threadname = IOThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff266a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff266a700, threadname = IOThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff1668700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1668700, threadname = DefaultThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff1e69700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e69700, threadname = IOThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff0e67700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e67700, threadname = DefaultThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff77a0010
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=5, hdr_frame=0x7ffff77a2028
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=6, hdr_frame=0x7ffff77a4040
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic6.data.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic6.data. file_desc=7, hdr_frame=0x7ffff77a6058
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic6, file: t_basic6.table
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=8, hdr_frame=0x7ffff77a8070
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=9, hdr_frame=0x7ffff77aa088
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=6
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 9:20:51 pid:10402 tid:7ffff78a1740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 9:21:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:21:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:21:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:21:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:22:51 pid:10402 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:22:51 pid:10402 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:22:51 pid:10402 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:22:51 pid:10402 tid:7ffff1668700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:23:51 pid:10402 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:23:51 pid:10402 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:23:51 pid:10402 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:23:51 pid:10402 tid:7ffff0e67700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:24:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:24:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:24:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:24:51 pid:10402 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1         # 默认为1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=S
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 11073 Time: Thu Sep 15 09:25:27 2022
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 9:25:27 pid:11073 tid:7ffff466d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466d700, threadname = SQLThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff3e6c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6c700, threadname = SQLThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff366b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366b700, threadname = SQLThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff2e6a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6a700, threadname = IOThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff2669700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2669700, threadname = IOThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff1e68700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e68700, threadname = IOThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff1667700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1667700, threadname = DefaultThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff0e66700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e66700, threadname = DefaultThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff779f010
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=5, hdr_frame=0x7ffff77a1028
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=6, hdr_frame=0x7ffff77a3040
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic6.data.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic6.data. file_desc=7, hdr_frame=0x7ffff77a5058
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic6, file: t_basic6.table
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=8, hdr_frame=0x7ffff77a7070
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=9, hdr_frame=0x7ffff77a9088
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=6
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 9:25:27 pid:11073 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 9:26:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:26:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:26:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:26:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:27:27 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:27:27 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:27:27 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:27:27 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:28:27 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:28:27 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:28:27 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:28:27 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:28:58 pid:11073 tid:7ffff78a0740  INFO: server.cpp accept 291]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-15 9:29:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:29:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:29:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:29:27 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:29:38 pid:11073 tid:7ffff78a0740  INFO: server.cpp recv 180]>>receive command(size=65): create table t_basic7(id int, age int, name char, score float);
+
+[2022-9-15 9:30:47 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:30:47 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:30:47 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:30:47 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:36:59 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:36:59 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:36:59 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:36:59 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:38:22 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:38:22 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:38:22 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:38:22 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:44:50 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:44:50 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:44:50 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:44:50 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  WARNNING: stmt.cpp create_stmt 37]>>unknown query command
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: table.cpp create 61]>>Begin to create table ./miniob/db/sys:t_basic7
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: table_meta.cpp init 97]>>Sussessfully initialized table meta. table name=t_basic7
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: disk_buffer_pool.cpp create_file 569]>>Successfully create ./miniob/db/sys/t_basic7.data.
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic7.data.
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic7.data. file_desc=16, hdr_frame=0x7ffff77ab0a0
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: table.cpp create 117]>>Successfully create table ./miniob/db/sys:t_basic7
+[2022-9-15 9:49:21 pid:11073 tid:7ffff0e66700  INFO: db.cpp create_table 75]>>Create table success. table name=t_basic7
+[2022-9-15 9:49:32 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:49:32 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0.00355872
+[2022-9-15 9:49:32 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0.00355872
+[2022-9-15 9:49:32 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0.00711744
+[2022-9-15 9:50:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:50:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:50:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:50:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:51:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:51:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:51:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:51:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:52:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:52:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:52:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:52:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:53:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:53:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:53:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:53:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:54:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:54:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:54:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:54:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:55:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:55:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:55:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:55:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:56:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:56:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:56:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:56:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:57:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:57:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:57:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:57:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:58:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:58:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:58:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:58:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 9:59:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 9:59:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 9:59:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 9:59:42 pid:11073 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 10:0:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 10:0:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 10:0:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 10:0:42 pid:11073 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 10:1:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 10:1:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 10:1:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 10:1:42 pid:11073 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1         # 默认为1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=S
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 6038 Time: Thu Sep 15 14:36:12 2022
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 14:36:12 pid:6038 tid:7ffff3e6c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6c700, threadname = SQLThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff466d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466d700, threadname = SQLThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff366b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366b700, threadname = SQLThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff2e6a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6a700, threadname = IOThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff2669700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2669700, threadname = IOThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff1e68700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e68700, threadname = IOThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff1667700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1667700, threadname = DefaultThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff0e66700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e66700, threadname = DefaultThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff779f010
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic7.data.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic7.data. file_desc=5, hdr_frame=0x7ffff77a1028
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic7, file: t_basic7.table
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=6, hdr_frame=0x7ffff77a3040
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=7, hdr_frame=0x7ffff77a5058
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic6.data.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic6.data. file_desc=8, hdr_frame=0x7ffff77a7070
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic6, file: t_basic6.table
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=9, hdr_frame=0x7ffff77a9088
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=10, hdr_frame=0x7ffff77ab0a0
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=7
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 14:36:12 pid:6038 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 14:36:24 pid:6038 tid:7ffff78a0740  INFO: server.cpp accept 291]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-15 14:36:31 pid:6038 tid:7ffff78a0740  INFO: server.cpp recv 180]>>receive command(size=6): hjjk
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: init.cpp init 230]>>Output configuration 
+Begin dump configuration
+[]
+
+[DefaultStorageStage]
+BaseDir=./miniob
+SystemDb=sys
+ThreadId=IOThreads
+
+[DefaultThreads]
+count=3
+
+[ExecuteStage]
+NextStages=DefaultStorageStage,MemStorageStage
+ThreadId=SQLThreads
+
+[IOThreads]
+count=3
+
+[LOG]
+LOG_CONSOLE_LEVEL=1         # 默认为1
+LOG_FILE_LEVEL=3
+LOG_FILE_NAME=observer.log
+
+[MemStorageStage]
+ThreadId=IOThreads
+
+[MetricsStage]
+NextStages=TimerStage
+
+[NET]
+CLIENT_ADDRESS=INADDR_ANY
+MAX_CONNECTION_NUM=8192
+PORT=6789
+
+[OptimizeStage]
+NextStages=ExecuteStage
+ThreadId=SQLThreads
+
+[ParseStage]
+NextStages=ResolveStage
+ThreadId=SQLThreads
+
+[PlanCacheStage]
+NextStages=ParseStage
+ThreadId=SQLThreads
+
+[QueryCacheStage]
+NextStages=OptimizeStage
+ThreadId=SQLThreads
+
+[ResolveStage]
+NextStages=QueryCacheStage
+ThreadId=SQLThreads
+
+[SEDA_BASE]
+EventHistory=false
+MaxEventHistoryNum=100
+STAGES=SessionStage,ExecuteStage,OptimizeStage,ParseStage,ResolveStage,PlanCacheStage,QueryCacheStage,DefaultStorageStage,MemStorageStage,TimerStage,MetricsStage
+ThreadPools=S
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2688, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2816, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:2944, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3072, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3200, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3328, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3456, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3584, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3712, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3840, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:3968, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4096, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4224, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4352, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4480, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4608, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4736, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4864, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:4992, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5120, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5248, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5376, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5504, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5632, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5760, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:5888, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6016, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6144, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6272, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h extend 299]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: mem_pool.h init 241]>>Extend one pool, this->size:6400, item_num_per_pool:128, this->name:BufPool.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: init.cpp init_seda 63]>>(Re)Starting State: Pid: 7349 Time: Thu Sep 15 17:27:07 2022
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: init.cpp init_seda 64]>>The process Name is observer
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_event_history 209]>>Successfully init_event_history, EventHistory:0, MaxEventHops:100
+[2022-9-15 17:27:7 pid:7349 tid:7ffff466d700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff466d700, threadname = SQLThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff3e6c700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff3e6c700, threadname = SQLThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff2e6a700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2e6a700, threadname = IOThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff366b700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff366b700, threadname = SQLThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff2669700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff2669700, threadname = IOThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff1e68700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1e68700, threadname = IOThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff1667700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff1667700, threadname = DefaultThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff0e66700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7ffff0e66700, threadname = DefaultThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7fffd3fff700  INFO: thread_pool.cpp run_thread 258]>>threadid = 7fffd3fff700, threadname = DefaultThreads
+
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage SessionStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ExecuteStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage OptimizeStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ParseStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage ResolveStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage PlanCacheStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage QueryCacheStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 87]>>Use sys as system db
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: default_handler.cpp init 64]>>Default handler init with ./miniob success
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  WARNNING: default_handler.cpp create_db 88]>>Db already exists: sys
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic5.data.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic5.data. file_desc=4, hdr_frame=0x7ffff779f010
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic5, file: t_basic5.table
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic7.data.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic7.data. file_desc=5, hdr_frame=0x7ffff77a1028
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic7, file: t_basic7.table
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic4.data.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic4.data. file_desc=6, hdr_frame=0x7ffff77a3040
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic4, file: t_basic4.table
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic3.data.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic3.data. file_desc=7, hdr_frame=0x7ffff77a5058
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic3, file: t_basic3.table
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic6.data.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic6.data. file_desc=8, hdr_frame=0x7ffff77a7070
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic6, file: t_basic6.table
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basi.data.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basi.data. file_desc=9, hdr_frame=0x7ffff77a9088
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basi, file: t_basi.table
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=__trx
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic.data.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic.data. file_desc=10, hdr_frame=0x7ffff77ab0a0
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 116]>>Open table: t_basic, file: t_basic.table
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: db.cpp open_all_tables 119]>>All table have been opened. num=7
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: default_storage_stage.cpp set_properties 111]>>Open system db success: sys
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage DefaultStorageStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MemStorageStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for TimerStage, use default threadpool DefaultThreads
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage TimerStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp get_thread_pool 296]>>Not set thread_pool_id for MetricsStage, use default threadpool DefaultThreads
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: seda_config.cpp init_stages 354]>>Stage MetricsStage use threadpool DefaultThreads.
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :DefaultStorageStage.query
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.sql
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: init.cpp init 260]>>Successfully init utility
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.readsocket
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 404]>>Listen on unix socket: miniob.sock
+[2022-9-15 17:27:7 pid:7349 tid:7ffff78a0740  INFO: server.cpp start_unix_socket_server 421]>>Observer start success
+[2022-9-15 17:27:11 pid:7349 tid:7ffff78a0740  INFO: server.cpp accept 291]>>Accepted connection from 0.0.0.0:0
+
+[2022-9-15 17:28:39 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:28:39 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:28:39 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:28:39 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:28:56 pid:7349 tid:7ffff78a0740  INFO: server.cpp recv 180]>>receive command(size=65): create table t_basic8(id int, age int, name char, score float);
+
+[2022-9-15 17:29:39 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:29:39 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:29:39 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:29:39 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:33:50 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:33:50 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0.004
+[2022-9-15 17:33:50 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:33:50 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:36:20 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:36:20 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:36:20 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:36:20 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:38:30 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:38:30 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:38:30 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:38:30 pid:7349 tid:7ffff0e66700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  WARNNING: stmt.cpp create_stmt 37]>>unknown query command
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: table.cpp create 61]>>Begin to create table ./miniob/db/sys:t_basic8
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: table_meta.cpp init 97]>>Sussessfully initialized table meta. table name=t_basic8
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: disk_buffer_pool.cpp create_file 569]>>Successfully create ./miniob/db/sys/t_basic8.data.
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic8.data.
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic8.data. file_desc=17, hdr_frame=0x7ffff77ad0b8
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: table.cpp create 117]>>Successfully create table ./miniob/db/sys:t_basic8
+[2022-9-15 17:39:5 pid:7349 tid:7fffd3fff700  INFO: db.cpp create_table 75]>>Create table success. table name=t_basic8
+[2022-9-15 17:39:30 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:39:30 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:39:30 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:304948,tps:0.0166667
+[2022-9-15 17:39:30 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0.0333333
+[2022-9-15 17:40:19 pid:7349 tid:7ffff78a0740  INFO: server.cpp recv 180]>>receive command(size=65): create table t_basic9(id int, age int, name char, score float);
+
+[2022-9-15 17:40:32 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:40:32 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:40:32 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:40:32 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:41:36 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:41:36 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0.015873
+[2022-9-15 17:41:36 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:41:36 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:41:42 pid:7349 tid:7ffff0e66700  WARNNING: stmt.cpp create_stmt 37]>>unknown query command
+[2022-9-15 17:42:42 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:42:42 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:42:42 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:42:42 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:43:58 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:43:58 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:43:58 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:43:58 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:44:1 pid:7349 tid:7ffff0e66700  INFO: table.cpp create 61]>>Begin to create table ./miniob/db/sys:t_basic9
+[2022-9-15 17:45:16 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:45:16 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:45:16 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:45:16 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:45:16 pid:7349 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=id
+[2022-9-15 17:45:16 pid:7349 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=age
+[2022-9-15 17:45:16 pid:7349 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=name
+[2022-9-15 17:45:16 pid:7349 tid:7ffff0e66700  INFO: field_meta.cpp init 69]>>Init a field with name=score
+[2022-9-15 17:45:16 pid:7349 tid:7ffff0e66700  INFO: table_meta.cpp init 97]>>Sussessfully initialized table meta. table name=t_basic9
+[2022-9-15 17:46:10 pid:7349 tid:7ffff0e66700  INFO: disk_buffer_pool.cpp create_file 569]>>Successfully create ./miniob/db/sys/t_basic9.data.
+[2022-9-15 17:46:14 pid:7349 tid:7ffff0e66700  INFO: disk_buffer_pool.cpp open_file 146]>>Successfully open file ./miniob/db/sys/t_basic9.data.
+[2022-9-15 17:46:14 pid:7349 tid:7ffff0e66700  INFO: disk_buffer_pool.cpp open_file 175]>>Successfully open ./miniob/db/sys/t_basic9.data. file_desc=18, hdr_frame=0x7ffff77af0d0
+[2022-9-15 17:46:14 pid:7349 tid:7ffff0e66700  INFO: record_manager.cpp init 265]>>Successfully open record file handle
+[2022-9-15 17:46:19 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:46:19 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:46:19 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:46:19 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:46:21 pid:7349 tid:7ffff0e66700  INFO: table.cpp create 117]>>Successfully create table ./miniob/db/sys:t_basic9
+[2022-9-15 17:46:48 pid:7349 tid:7ffff0e66700  INFO: db.cpp create_table 75]>>Create table success. table name=t_basic9
+[2022-9-15 17:47:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:47:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:47:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:47:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:48:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:48:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:48:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:48:27 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:51:21 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:51:21 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:51:21 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:51:21 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0.0115607
+[2022-9-15 17:52:24 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:52:24 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:52:24 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:642084,tps:0.015873
+[2022-9-15 17:52:24 pid:7349 tid:7ffff1667700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-9-15 17:53:24 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-9-15 17:53:24 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:0
+[2022-9-15 17:53:24 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-9-15 17:53:24 pid:7349 tid:7fffd3fff700  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0

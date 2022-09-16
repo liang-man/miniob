@@ -17,6 +17,7 @@ See the Mulan PSL v2 for more details. */
 #include "rc.h"
 #include "common/log/log.h"
 #include "sql/parser/parse_defs.h"
+#include "storage/common/meta_util.h"
 
 #define FIRST_INDEX_PAGE 1
 
@@ -874,6 +875,20 @@ RC BplusTreeHandler::close()
   if (disk_buffer_pool_ != nullptr) {
 
     disk_buffer_pool_->close_file(); // TODO
+
+    delete mem_pool_item_;
+    mem_pool_item_ = nullptr;
+  }
+
+  disk_buffer_pool_ = nullptr;
+  return RC::SUCCESS;
+}
+
+RC BplusTreeHandler::drop(const char *path, const char *name, const char *index)
+{
+  if (disk_buffer_pool_ != nullptr) {
+
+    disk_buffer_pool_->drop_file(path, name, index);
 
     delete mem_pool_item_;
     mem_pool_item_ = nullptr;

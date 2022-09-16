@@ -31,6 +31,8 @@ public:
 
   RC init(const char *name, const char *dbpath);
 
+  RC drop_table(const char *table_name);    // author：liangman
+
   RC create_table(const char *table_name, int attribute_count, const AttrInfo *attributes);
 
   Table *find_table(const char *table_name) const;

@@ -50,6 +50,41 @@ Table::~Table()
   LOG_INFO("Table has been closed: %s", name());
 }
 
+// path是db路径， name是表名
+RC Table::drop(const char *path, const char *name) 
+{
+  RC rc = RC::SUCCESS;   
+
+  // 删除索引
+  /*const int index_num = table_meta_.index_num();
+  for (int i = 0; i < index_num; ++i) {
+    Index *index = indexes_[i];
+    index->drop(path, name, index->index_meta().name());
+  }*/
+
+  for (Index *index : indexes_)
+    index->drop(path, name, index->index_meta().name());
+
+  // 删除data_buffer_pool_中的记录以及.data文件
+  std::string data_file = table_data_file(path, name);
+  BufferPoolManager &bpm = BufferPoolManager::instance();
+  rc = bpm.drop_file(data_file.c_str());
+  if (rc != RC::SUCCESS) {
+    LOG_ERROR("Failed to drop disk buffer pool of data file. file name=%s", data_file.c_str());
+    return rc;
+  }
+
+  // 删除RecordManager中的记录
+  delete record_handler_;     // 释放内存空间
+  record_handler_ = nullptr;  // 回到初始状态
+
+  // 删除元数据文件(.table)
+  std::string table_file = table_meta_file(path, name);
+  ::remove(table_file.c_str());   // 库函数
+
+  return rc;
+}
+
 RC Table::create(
     const char *path, const char *name, const char *base_dir, int attribute_count, const AttrInfo attributes[])
 {
@@ -98,15 +133,15 @@ RC Table::create(
   table_meta_.serialize(fs);
   fs.close();
 
-  std::string data_file = table_data_file(base_dir, name);
-  BufferPoolManager &bpm = BufferPoolManager::instance();
+  std::string data_file = table_data_file(base_dir, name);   // .data文件路径
+  BufferPoolManager &bpm = BufferPoolManager::instance();   // 数据不是从磁盘中取出来直接用，而是经过了一个buffer pool再用
   rc = bpm.create_file(data_file.c_str());
   if (rc != RC::SUCCESS) {
     LOG_ERROR("Failed to create disk buffer pool of data file. file name=%s", data_file.c_str());
     return rc;
   }
 
-  rc = init_record_handler(base_dir);
+  rc = init_record_handler(base_dir);    // 管理行数据的，增删改查
   if (rc != RC::SUCCESS) {
     LOG_ERROR("Failed to create table %s due to init record handler failed.", data_file.c_str());
     // don't need to remove the data_file

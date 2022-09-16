@@ -115,6 +115,8 @@ public:
   RC init(DiskBufferPool *buffer_pool);
   void close();
 
+  RC destroy();
+
   /**
    * 更新指定文件中的记录，rec指向的记录结构中的rid字段为要更新的记录的标识符，
    * pData字段指向新的记录内容

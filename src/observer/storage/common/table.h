@@ -35,6 +35,13 @@ public:
   Table() = default;
   ~Table();
 
+  // author: liangman
+  // 删除一个表
+  /* 
+    @param path: 元数据文件(.table)路径，注意不是数据文件(.data)路径
+  */
+  RC drop(const char *path, const char *name);
+
   /**
    * 创建一个表
    * @param path 元数据保存的文件(完整路径)

@@ -18,6 +18,7 @@ See the Mulan PSL v2 for more details. */
 #include "common/lang/mutex.h"
 #include "common/log/log.h"
 #include "common/os/os.h"
+#include "storage/common/meta_util.h"
 
 using namespace common;
 
@@ -174,6 +175,15 @@ RC DiskBufferPool::open_file(const char *file_name)
 
   LOG_INFO("Successfully open %s. file_desc=%d, hdr_frame=%p", file_name, file_desc_, hdr_frame_);
   return RC::SUCCESS;
+}
+
+RC DiskBufferPool::drop_file(const char *path, const char *name, const char *index_name)
+{
+  RC rc = close_file();
+  std::string index_file = table_index_file(path, name, index_name);
+  ::remove(index_file.c_str());
+
+  return rc;
 }
 
 RC DiskBufferPool::close_file()
@@ -523,6 +533,17 @@ BufferPoolManager::~BufferPoolManager()
   for (auto &iter : tmp_bps) {
     delete iter.second;
   }
+}
+
+RC BufferPoolManager::drop_file(const char *data_file)
+{
+  RC rc = close_file(data_file);
+  if (rc != RC::SUCCESS) {
+    LOG_ERROR("failed to close file.");
+    return rc;
+  }
+  ::remove(data_file);
+  return RC::SUCCESS;
 }
 
 RC BufferPoolManager::create_file(const char *file_name)

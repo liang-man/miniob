@@ -27,6 +27,8 @@ public:
   RC open(const char *file_name, const IndexMeta &index_meta, const FieldMeta &field_meta);
   RC close();
 
+  RC drop(const char *path, const char *name, const char *index) override;   // author：liangman
+
   RC insert_entry(const char *record, const RID *rid) override;
   RC delete_entry(const char *record, const RID *rid) override;
 

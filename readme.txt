@@ -1,0 +1,1 @@
+当前路径下的文件miniob.udb是understand软件建立工程后所产生的

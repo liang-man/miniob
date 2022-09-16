@@ -109,6 +109,10 @@ void Server::close_connection(ConnectionContext *client_context)
   delete client_context;
 }
 
+// 当有新的网络事件到来，libevent会调用我们注册的这个recv回调函数，用来处理接受到的信息
+// 客户端消息到达，服务端会首先创建SessionEvent，并传递给SessionStage进行处理
+// Event作为消息传递的载体，后续消息就会以事件的形式在各个Stage之间传递，不同Stage之间的Event也不一样
+// SessionSate就是门户，是第一个Stage，SessionEvent是到达消息的第一个Event形式
 void Server::recv(int fd, short ev, void *arg)
 {
   ConnectionContext *client = (ConnectionContext *)arg;
@@ -174,8 +178,16 @@ void Server::recv(int fd, short ev, void *arg)
   }
 
   LOG_INFO("receive command(size=%d): %s", data_len, client->buf);
-  SessionEvent *sev = new SessionEvent(client);
-  session_stage_->add_event(sev);
+  SessionEvent *sev = new SessionEvent(client);   // 接收到新的消息时，首先建立一个SessionEvent(seda中的一个概念)
+  session_stage_->add_event(sev);   //然后将这个SessionEvent推送到SessionStage中，交由SessionStage去调度
+
+  /*关于seda调度：
+    seda在线程池中调度到达的事件(event)，seda在处理完每个event后，都需要调用seda的接口进行善后处理，接口有：
+    * event->done()             seda调用异步事件后的善后处理
+    * event->done_immediate()   seda直接把event在当前线程池中删除
+    * event->done_timeout();    一般不使用
+    miniob中为了方便处理，都直接执行event->done_immediate()接口
+  */
 }
 
 // 这个函数仅负责发送数据，至于是否是一个完整的消息，由调用者控制
@@ -425,7 +437,7 @@ int Server::serve()
     exit(-1);
   }
 
-  event_base_dispatch(event_base_);
+  event_base_dispatch(event_base_);    // 这句表示开始部署线程，之后就是一直等待客户端消息
 
   if (listen_ev_ != nullptr) {
     event_del(listen_ev_);
